@@ -20,8 +20,9 @@ def count_seq():
             if length <= element + 1 or num[element + 1] != num[element]:
                 sequence += str(val)
                 sequence += num[element]
-                val = 0
+                val = 1
             else:
                 pass
         num = sequence
         yield num
+
