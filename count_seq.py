@@ -12,25 +12,21 @@ def count_seq():
 
     num = "2"
     yield num
+
     while num:
         length = len(num)
         val = 0
         sequence = ""
+
         for element in range(0, length):
             val += 1
+
             if length <= element + 1 or num[element + 1] != num[element]:
                 sequence += str(val)
                 sequence += num[element]
                 val = 0
+
             else:
                 pass
         num = sequence
         yield num
-
-
-if __name__ == '__main__':
-
-    gen = count_seq()
-
-    for index in range(10):
-        print(next(gen))
